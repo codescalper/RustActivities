@@ -13,7 +13,21 @@
 //   to print
 
 
-fn main() {}
+fn main() {
+    let num = 120;
+    let bool_value =  num>100; // why i have written this 
+    // * Because assignment is on expressions
+    check_num(bool_value)
+
+
+}
+
+fn check_num(result:bool){
+    match result{
+        true=> println!("true"),
+        false => println!("false")
+    }
+}
 
 
 
