@@ -12,7 +12,25 @@
 
 
 fn main() {
+    let stud = Student{
+        name:"John".to_string(),
+        locker_assignment:Some(5),
+    };
 
+    match stud.locker_assignment{
+        Some(data) =>{
+            println!("{}",data)
+        },
+        None => {
+            println!("THe data is not available")
+        }
+    }
 
     
 }
+
+struct Student{
+    name:String,
+    locker_assignment:Option<i32>
+}
+
