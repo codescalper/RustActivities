@@ -17,6 +17,22 @@
 
 
 fn main() {
+    let customer = Customer {
+        age: 22,
+    };
 
-    
+    let result: Result<String, String> = entry(customer);
+    println!("{:?}", result);
+}
+
+struct Customer {
+    age: i32,
+}
+
+fn entry(customer: Customer) -> Result<String, String> {
+    if customer.age >= 21 {
+        Ok("The user is allowed since age is at least 21".to_string())
+    } else {
+        Err("The user is not allowed as customer age is below 21".to_string())
+    }
 }
