@@ -9,14 +9,14 @@
 #[derive(Debug)]
 enum Car{
     Mercedes,
-    BMW,
+    Bmw,
     Audi
 }
 
 fn car_variant (word:&str)-> Option<Car> {
     match word{
         "Mercedes" =>Some(Car::Mercedes),
-        "BMW" =>Some(Car::BMW),
+        "Bmw" =>Some(Car::Bmw),
         "Audi" =>Some(Car::Audi),   
         _ =>None,
     }
@@ -31,7 +31,7 @@ struct Details{
 
 fn main(){
     
-    let car_name = "BMW";
+    let car_name = "Bmw";
     let get_car_variant = car_variant(car_name);
     
     if let Some(car) = get_car_variant{
