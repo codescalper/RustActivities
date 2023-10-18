@@ -10,8 +10,35 @@
 */
 
 
+#[derive(Debug)]
+enum Phone{
+    Iphone,
+    Samsung,
+    OnePlus
+}
+
+#[derive(Debug)]
+enum Headset{
+    Sony,
+    Jbl,
+    Boat
+}
+#[derive(Debug)]
+struct Shop{
+    phone:Phone,
+    headset:Headset
+}
+
 fn main(){
 
+
+    let shop = Shop{
+        phone:Phone::Samsung,
+        headset:Headset::Sony
+
+    };
+
+    println!("{:?}",shop)
 
 }
 
